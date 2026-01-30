@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Builder - Technical PM & AI Developer Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Faiportfol9405back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.16"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="bg-[#0a0a0a] text-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-sm bg-[#0a0a0a]/80 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-tight">AI Portfolio</a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#skills" class="hover:text-[#B8E6CC] transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-[#B8D4E6] transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-[#D4B8E6] transition-colors">Contact</a>
+            </div>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full text-xs font-bold transition-colors">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span class="hidden sm:inline">LinkedIn</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full min-h-[90vh] rounded-bl-[80px] md:rounded-bl-[150px] overflow-hidden flex flex-col">
+        <!-- Background Gradient -->
+        <div
+            class="absolute inset-0 bg-gradient-to-br from-[#B8E6CC]/10 via-[#B8D4E6]/10 via-[#D4B8E6]/10 to-[#E6E6B8]/10">
+        </div>
+
+        <!-- Subtle Particle Effect -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-20 left-10 w-2 h-2 bg-[#B8E6CC] rounded-full animate-pulse"></div>
+            <div class="absolute top-40 right-20 w-1 h-1 bg-[#B8D4E6] rounded-full animate-pulse delay-100"></div>
+            <div class="absolute bottom-40 left-1/4 w-1.5 h-1.5 bg-[#D4B8E6] rounded-full animate-pulse delay-200">
+            </div>
+            <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-[#E6E6B8] rounded-full animate-pulse delay-300"></div>
+        </div>
+
+        <!-- Content -->
+        <div
+            class="flex flex-col md:px-12 h-full max-w-7xl z-10 mx-auto pt-32 px-6 pb-12 relative justify-center flex-grow">
+            <div class="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
+                <!-- Profile Picture: max 40% on desktop -->
+                <div class="w-full md:basis-2/5 md:max-w-[40%] md:flex-shrink-0 mb-4 md:mb-0 md:-mt-[15%]">
+                    <img src="media/profile.png" alt="Profile" class="w-full object-cover transition-all duration-500">
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex flex-col justify-end relative z-10 pl-4 md:pl-0">
+                    <div class="mb-6">
+                        <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-slate-400">Welcome to my
+                            portfolio</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl leading-[1.1] font-medium tracking-tight max-w-4xl mb-8">
+                        <span class="text-highlight-gradient">Hans Himawan</span>
+                        <br>
+                        <span class="text-highlight-gradient">AI Product Builder</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed mb-12">
+                        A blend of technical depth in Applied AI and entrepreneurial drive, building functional
+                        solutions
+                        that
+                        align with user needs
+                    </p>
+                    <a href="#skills"
+                        class="inline-flex items-center gap-3 border border-white/20 rounded-full pl-6 pr-2 py-2 hover:bg-white/10 hover:shadow-lg transition-all group w-fit">
+                        <span class="text-sm font-semibold">Explore Work</span>
+                        <span
+                            class="w-8 h-8 rounded-full bg-white text-[#0a0a0a] flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-6">
+            <div class="flex items-baseline gap-8">
+                <h2 class="text-4xl md:text-5xl font-medium tracking-tight">Technical Skills</h2>
+                <span class="text-sm font-medium text-slate-400">Expertise Areas</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <!-- AI & Automation -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8E6CC]/20 to-[#B8E6CC]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <i data-lucide="brain" class="w-12 h-12 text-[#B8E6CC]"></i>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#B8E6CC] bg-[#B8E6CC]/10 px-3 py-1 rounded-full">AI</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold leading-tight mb-4">AI & Automation</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">AI Workflows</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">RAG</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">OCR</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">NLP</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">LangChain</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Stack -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8D4E6]/20 to-[#B8D4E6]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <i data-lucide="code" class="w-12 h-12 text-[#B8D4E6]"></i>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#B8D4E6] bg-[#B8D4E6]/10 px-3 py-1 rounded-full">Tech</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold leading-tight mb-4">Technical Stack</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Python</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Flask/FastAPI</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">PostgreSQL</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Supabase</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Google Cloud</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">MongoDB</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">NextJS/React</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Management -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#D4B8E6]/20 to-[#D4B8E6]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <i data-lucide="layout-grid" class="w-12 h-12 text-[#D4B8E6]"></i>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#D4B8E6] bg-[#D4B8E6]/10 px-3 py-1 rounded-full">PM</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold leading-tight mb-4">Product Management</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">B2B</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">SaaS</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Systems Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#E6E6B8]/20 to-[#E6E6B8]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <i data-lucide="bar-chart" class="w-12 h-12 text-[#E6E6B8]"></i>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#E6E6B8] bg-[#E6E6B8]/10 px-3 py-1 rounded-full">Data</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold leading-tight mb-4">Data Analysis</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Seaborn</span>
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-6">
+            <div class="flex items-baseline gap-8">
+                <h2 class="text-4xl md:text-5xl font-medium tracking-tight">Featured Projects</h2>
+                <span class="text-sm font-medium text-slate-400">Real-World Applications</span>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Biroo AI -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8E6CC]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="file-text" class="w-20 h-20 text-[#B8E6CC]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8E6CC]/10 text-[#B8E6CC] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">RAG</span>
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Python</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">LangChain</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">Biroo AI</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">RAG-powered document processing system
+                    with intelligent retrieval and context-aware responses for enterprise knowledge management</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thyroid-SPOT -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8D4E6]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="scan" class="w-20 h-20 text-[#B8D4E6]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8E6CC]/10 text-[#B8E6CC] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">OCR</span>
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">NLP</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">FastAPI</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">Thyroid-SPOT</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">OCR-powered medical report extraction
+                    system for thyroid diagnostics with automated data structuring and analysis</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ThyroidConvert -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#D4B8E6]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="activity" class="w-20 h-20 text-[#D4B8E6]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">NextJS</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">SaaS</span>
+                    <span
+                        class="bg-[#E6E6B8]/10 text-[#E6E6B8] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">B2B</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">ThyroidConvert</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">Healthcare SaaS platform for thyroid data
+                    conversion and standardization across medical facilities</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CC Cup -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#E6E6B8]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="trophy" class="w-20 h-20 text-[#E6E6B8]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">React</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">PostgreSQL</span>
+                    <span
+                        class="bg-[#E6E6B8]/10 text-[#E6E6B8] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Docker</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">CC Cup Applications</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">Competition management platform with
+                    real-time scoring, participant tracking, and event coordination</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aalsa -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8E6CC]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="database" class="w-20 h-20 text-[#B8E6CC]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8E6CC]/10 text-[#B8E6CC] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">MongoDB</span>
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Flask</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Supabase</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">Aalsa Projects</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">Data management and analytics suite with
+                    integrated backend infrastructure and real-time synchronization</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Munlify -->
+            <div class="group cursor-pointer">
+                <div
+                    class="relative aspect-video overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8D4E6]/10 to-[#0a0a0a] border border-white/10">
+                    <div
+                        class="w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
+                        <i data-lucide="layers" class="w-20 h-20 text-[#B8D4E6]"></i>
+                    </div>
+                </div>
+                <div class="flex gap-2 mb-4 flex-wrap">
+                    <span
+                        class="bg-[#B8E6CC]/10 text-[#B8E6CC] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">AI
+                        Workflows</span>
+                    <span
+                        class="bg-[#B8D4E6]/10 text-[#B8D4E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Google
+                        Cloud</span>
+                    <span
+                        class="bg-[#D4B8E6]/10 text-[#D4B8E6] rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">Systems
+                        Design</span>
+                </div>
+                <h3 class="text-xl font-bold leading-tight mb-4">Munlify</h3>
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">Automated workflow orchestration platform
+                    with cloud-native architecture and scalable processing pipelines</p>
+                <div class="flex justify-end mt-4">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-6 md:px-12 pb-24 max-w-7xl mx-auto">
+        <div
+            class="bg-gradient-to-br from-[#B8E6CC]/20 via-[#B8D4E6]/20 via-[#D4B8E6]/20 to-[#E6E6B8]/20 rounded-[40px] md:rounded-[80px] overflow-hidden relative min-h-[400px] flex items-center border border-white/10">
+            <div class="relative z-10 p-12 md:p-20 max-w-2xl mx-auto text-center">
+                <h2 class="text-4xl md:text-6xl font-medium leading-none tracking-tight mb-8 text-white">
+                    <span class="text-highlight-gradient-inverse">Let's Connect</span>
+                </h2>
+                <p class="text-lg text-slate-400 mb-8 leading-relaxed">
+                    Interested in collaborating or discussing opportunities? Connect with me on LinkedIn.
+                </p>
+                <a href="https://www.linkedin.com/in/hans-himawan-0a35231a5/" target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-white text-[#0a0a0a] px-8 py-4 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-xl">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    View LinkedIn Profile
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 py-8 px-6 md:px-12">
+        <div
+            class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
+            <p>© 2026 AI Portfolio. All rights reserved.</p>
+            <div class="flex items-center gap-6">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth scroll with offset for fixed nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll-triggered fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            observer.observe(section);
+        });
+    </script>
+    <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+
+</html>
