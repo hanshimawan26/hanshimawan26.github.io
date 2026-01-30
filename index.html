@@ -215,8 +215,9 @@
         <div class="flex flex-col gap-24">
             <!-- Biroo AI -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="carousel"
+                    data-media-gallery='["media/biroo-1.png", "media/biroo-2.png", "media/biroo-3.png"]'>
                     <div id="biroo-carousel"
                         class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/biroo-1.png"
@@ -270,8 +271,8 @@
 
             <!-- Thyroid-SPOT and ThyroConvert -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="image" data-media-src="media/thyroid-apps.png">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/thyroid-apps.png"
                             class="absolute inset-0 w-full h-full object-cover bg-black/50"
@@ -315,8 +316,8 @@
 
             <!-- CC Cup Applications -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="image" data-media-src="media/cc-cup.png">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/cc-cup.png" class="absolute inset-0 w-full h-full object-contain bg-black/50"
                             alt="CC Cup Applications Interface">
@@ -364,8 +365,8 @@
 
             <!-- Aalsa AI -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="image" data-media-src="media/aalsa ai telegram chat censored.png">
                     <div class="w-full h-full relative group-hover:scale-105 transition-transform duration-700">
                         <img src="media/aalsa ai telegram chat censored.png"
                             class="absolute inset-0 w-full h-full object-cover animate-pan-y"
@@ -404,8 +405,8 @@
 
             <!-- Aalsa Farms -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="image" data-media-src="media/aalsa farms.png">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/aalsa farms.png" class="absolute inset-0 w-full h-full object-cover"
                             alt="Aalsa Farms Interface">
@@ -441,8 +442,8 @@
 
             <!-- Munlify -->
             <div class="group flex flex-col md:flex-row gap-8 items-center">
-                <div
-                    class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
+                <div class="w-full md:w-1/2 flex-shrink-0 aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
+                    data-media-type="video" data-media-src="media/munlify vid.mp4">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <video class="absolute inset-0 w-full h-full object-cover bg-black/50" autoplay loop muted
                             playsinline>
@@ -515,6 +516,44 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal HTML Structure -->
+    <div id="media-modal"
+        class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md transition-opacity duration-300 opacity-0"
+        aria-hidden="true">
+        <!-- Close button -->
+        <button id="modal-close"
+            class="absolute top-6 right-6 text-white/50 hover:text-white z-[110] transition-colors bg-black/20 rounded-full p-2">
+            <i data-lucide="x" class="w-8 h-8"></i>
+        </button>
+
+        <!-- Content Container -->
+        <div class="w-full h-full flex items-center justify-center p-4">
+            <div id="modal-content-wrapper"
+                class="relative max-w-7xl max-h-full overflow-y-auto rounded-lg shadow-2xl scrollbar-hide flex flex-col items-center justify-center">
+
+                <!-- Image Display -->
+                <img id="modal-image" src="" alt="Project Preview"
+                    class="hidden w-full h-auto max-h-[90vh] object-contain">
+
+                <!-- Video Display -->
+                <video id="modal-video" controls class="hidden w-full h-auto max-h-[90vh] object-contain">
+                    <source id="modal-video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Carousel Controls -->
+                <button id="modal-prev"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors hidden z-[120]">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="modal-next"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors hidden z-[120]">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Initialize Lucide icons
@@ -604,7 +643,7 @@
             autoScroll();
         })();
 
-        // Biroo AI Image Carousel
+        // Biroo AI Image Carousel (Main Page)
         (function initBirooCarousel() {
             const carousel = document.getElementById('biroo-carousel');
             if (!carousel) return;
@@ -626,8 +665,123 @@
                 images[currentIndex].classList.add('opacity-100');
             }
 
-            setInterval(cycleImages, intervalTime);
+            // Store interval ID to possibly clear it later if needed (optional)
+            const intervalId = setInterval(cycleImages, intervalTime);
         })();
+
+        // --- MODAL LOGIC ---
+        const modal = document.getElementById('media-modal');
+        const modalContent = document.getElementById('modal-content-wrapper');
+        const modalImage = document.getElementById('modal-image');
+        const modalVideo = document.getElementById('modal-video');
+        const modalVideoSource = document.getElementById('modal-video-source');
+        const prevButton = document.getElementById('modal-prev');
+        const nextButton = document.getElementById('modal-next');
+        let currentGallery = [];
+        let currentGalleryIndex = 0;
+
+        function openModal(type, srcOrGallery) {
+            modal.classList.remove('hidden');
+            // Trigger reflow
+            void modal.offsetWidth;
+            modal.classList.remove('opacity-0');
+            document.body.style.overflow = 'hidden'; // Prevent body scroll
+
+            // Reset state
+            modalImage.classList.add('hidden');
+            modalVideo.classList.add('hidden');
+            prevButton.classList.add('hidden');
+            nextButton.classList.add('hidden');
+            modalVideo.pause();
+
+            if (type === 'video') {
+                modalVideo.classList.remove('hidden');
+                modalVideoSource.src = srcOrGallery;
+                modalVideo.load();
+            } else if (type === 'carousel') {
+                currentGallery = srcOrGallery;
+                currentGalleryIndex = 0;
+                showGalleryImage();
+                modalImage.classList.remove('hidden');
+
+                if (currentGallery.length > 1) {
+                    prevButton.classList.remove('hidden');
+                    nextButton.classList.remove('hidden');
+                }
+            } else { // image
+                modalImage.classList.remove('hidden');
+                modalImage.src = srcOrGallery;
+            }
+        }
+
+        function showGalleryImage() {
+            modalImage.src = currentGallery[currentGalleryIndex];
+        }
+
+        function nextImage() {
+            currentGalleryIndex = (currentGalleryIndex + 1) % currentGallery.length;
+            showGalleryImage();
+        }
+
+        function prevImage() {
+            currentGalleryIndex = (currentGalleryIndex - 1 + currentGallery.length) % currentGallery.length;
+            showGalleryImage();
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalVideo.pause();
+                modalImage.src = '';
+                document.body.style.overflow = ''; // Restore body scroll
+            }, 300);
+        }
+
+        // Event Listeners for Modal
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('p-4')) {
+                closeModal();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+            // Carousel navigation with keys
+            if (!modal.classList.contains('hidden') && !prevButton.classList.contains('hidden')) {
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            }
+        });
+        nextButton.addEventListener('click', nextImage);
+        prevButton.addEventListener('click', prevImage);
+
+        // Attach listeners to Project Cards
+        // Attach listeners to Project Cards using the generic class
+        document.querySelectorAll('.js-modal-trigger').forEach(trigger => {
+            trigger.addEventListener('click', (e) => {
+                // Stop propagation if necessary, but usually overlapping clicks are fine here
+                const type = trigger.dataset.mediaType;
+                let srcOrGallery = trigger.dataset.mediaSrc;
+
+                if (type === 'carousel') {
+                    // Parse the JSON array for gallery
+                    try {
+                        srcOrGallery = JSON.parse(trigger.dataset.mediaGallery);
+                    } catch (e) {
+                        console.error('Error parsing gallery data', e);
+                        return;
+                    }
+                }
+
+                if (type && srcOrGallery) {
+                    openModal(type, srcOrGallery);
+                }
+            });
+        });
+
     </script>
     <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
