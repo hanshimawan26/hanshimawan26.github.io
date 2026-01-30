@@ -52,7 +52,7 @@
 
         <!-- Content -->
         <div
-            class="flex flex-col md:px-12 h-full max-w-7xl z-10 mx-auto pt-32 px-6 pb-12 relative justify-center flex-grow">
+            class="flex flex-col md:px-12 h-full max-w-7xl z-10 mx-auto pt-10 md:pt-32 px-6 pb-12 relative justify-center flex-grow">
             <div class="flex flex-col md:flex-row md:items-end gap-8 md:gap-12">
                 <!-- Profile Picture: max 40% on desktop -->
                 <div class="w-full md:basis-2/5 md:max-w-[40%] md:flex-shrink-0 mb-4 md:mb-0 md:-mt-[15%]">
@@ -98,9 +98,9 @@
             </div>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-6">
+        <div id="skills-carousel" class="flex gap-6 overflow-x-auto pb-4 scrollbar-hide -mx-6 px-6">
             <!-- AI & Automation -->
-            <div class="group cursor-pointer">
+            <div class="group cursor-pointer flex-shrink-0 w-[280px] md:w-[300px] snap-start">
                 <div
                     class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8E6CC]/20 to-[#B8E6CC]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
                     <div class="flex items-center justify-between mb-4">
@@ -121,25 +121,42 @@
                 </div>
             </div>
 
-            <!-- Technical Stack -->
-            <div class="group cursor-pointer">
+            <!-- Full-Stack Dev -->
+            <div class="group cursor-pointer flex-shrink-0 w-[280px] md:w-[300px] snap-start">
                 <div
                     class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#B8D4E6]/20 to-[#B8D4E6]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
                     <div class="flex items-center justify-between mb-4">
                         <i data-lucide="code" class="w-12 h-12 text-[#B8D4E6]"></i>
                         <span
-                            class="text-[10px] font-bold uppercase tracking-wider text-[#B8D4E6] bg-[#B8D4E6]/10 px-3 py-1 rounded-full">Tech</span>
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#B8D4E6] bg-[#B8D4E6]/10 px-3 py-1 rounded-full">Dev</span>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold leading-tight mb-4">Technical Stack</h3>
+                        <h3 class="text-xl font-bold leading-tight mb-4">Full-Stack Dev</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">Python</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">Flask/FastAPI</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">PostgreSQL</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">Supabase</span>
-                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Google Cloud</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">MongoDB</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">NextJS/React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deployment -->
+            <div class="group cursor-pointer flex-shrink-0 w-[280px] md:w-[300px] snap-start">
+                <div
+                    class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#c0b8e6]/20 to-[#c0b8e6]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <i data-lucide="cloud" class="w-12 h-12 text-[#c0b8e6]"></i>
+                        <span
+                            class="text-[10px] font-bold uppercase tracking-wider text-[#c0b8e6] bg-[#c0b8e6]/10 px-3 py-1 rounded-full">Deploy</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold leading-tight mb-4">Deployment</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-white/5 px-2 py-1 rounded">Google Cloud</span>
                             <span class="text-xs bg-white/5 px-2 py-1 rounded">Docker</span>
                         </div>
                     </div>
@@ -147,7 +164,7 @@
             </div>
 
             <!-- Product Management -->
-            <div class="group cursor-pointer">
+            <div class="group cursor-pointer flex-shrink-0 w-[280px] md:w-[300px] snap-start">
                 <div
                     class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#D4B8E6]/20 to-[#D4B8E6]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
                     <div class="flex items-center justify-between mb-4">
@@ -167,7 +184,7 @@
             </div>
 
             <!-- Data -->
-            <div class="group cursor-pointer">
+            <div class="group cursor-pointer flex-shrink-0 w-[280px] md:w-[300px] snap-start">
                 <div
                     class="relative aspect-square overflow-hidden rounded-[30px] mb-6 bg-gradient-to-br from-[#E6E6B8]/20 to-[#E6E6B8]/5 p-8 flex flex-col justify-between transition-all duration-700 hover:scale-105 hover:shadow-2xl">
                     <div class="flex items-center justify-between mb-4">
@@ -444,6 +461,52 @@
             section.style.transform = 'translateY(20px)';
             observer.observe(section);
         });
+
+        // Infinite auto-scroll for skills carousel
+        (function initSkillsCarousel() {
+            const carousel = document.getElementById('skills-carousel');
+            if (!carousel) return;
+
+            // Clone all items for seamless loop
+            const items = carousel.querySelectorAll('.group');
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+
+            // Re-initialize Lucide icons for cloned elements
+            lucide.createIcons();
+
+            let scrollSpeed = 0.5; // pixels per frame
+            let isPaused = false;
+            let animationId;
+
+            function autoScroll() {
+                if (!isPaused) {
+                    carousel.scrollLeft += scrollSpeed;
+
+                    // Reset to start when we've scrolled past the original items
+                    const halfScrollWidth = carousel.scrollWidth / 2;
+                    if (carousel.scrollLeft >= halfScrollWidth) {
+                        carousel.scrollLeft = 0;
+                    }
+                }
+                animationId = requestAnimationFrame(autoScroll);
+            }
+
+            // Pause on hover
+            carousel.addEventListener('mouseenter', () => isPaused = true);
+            carousel.addEventListener('mouseleave', () => isPaused = false);
+
+            // Pause on touch
+            carousel.addEventListener('touchstart', () => isPaused = true);
+            carousel.addEventListener('touchend', () => {
+                setTimeout(() => isPaused = false, 2000);
+            });
+
+            // Start animation
+            autoScroll();
+        })();
     </script>
     <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
 </body>
