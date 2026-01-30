@@ -43,6 +43,19 @@ module.exports = {
                         opacity: '0.3',
                     },
                 },
+                'pan-y': {
+                    '0%': {
+                        'object-position': 'center top',
+                    },
+                    '100%': {
+                        'object-position': 'center bottom',
+                    },
+                },
+            },
+            animation: {
+                'fade-in': 'fade-in 0.8s ease-out forwards',
+                'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'pan-y': 'pan-y 40s linear infinite',
             },
         },
     },
