@@ -215,10 +215,10 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             <!-- Biroo AI -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="carousel"
-                    data-media-gallery='["media/biroo-1.png", "media/biroo-2.png", "media/biroo-3.png"]'>
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="carousel"
+                data-media-gallery='["media/biroo-1.png", "media/biroo-2.png", "media/biroo-3.png"]'>
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div id="biroo-carousel"
                         class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/biroo-1.png"
@@ -271,9 +271,10 @@
             </div>
 
             <!-- Thyroid-SPOT and ThyroConvert -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="image" data-media-src="media/thyroid-apps.png">
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="image"
+                data-media-src="media/thyroid-apps.png">
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/thyroid-apps.png"
                             class="absolute inset-0 w-full h-full object-cover bg-black/50"
@@ -316,9 +317,10 @@
             </div>
 
             <!-- CC Cup Applications -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="image" data-media-src="media/cc-cup.png">
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="image"
+                data-media-src="media/cc-cup.png">
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/cc-cup.png" class="absolute inset-0 w-full h-full object-contain bg-black/50"
                             alt="CC Cup Applications Interface">
@@ -365,10 +367,10 @@
             </div>
 
             <!-- Aalsa AI -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="image" data-media-src="media/aalsa ai telegram chat censored.png"
-                    data-use-osd="true">
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="image"
+                data-media-src="media/aalsa ai telegram chat censored.png" data-use-osd="true">
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div class="w-full h-full relative group-hover:scale-105 transition-transform duration-700">
                         <img src="media/aalsa ai telegram chat censored.png"
                             class="absolute inset-0 w-full h-full object-cover animate-pan-y"
@@ -406,9 +408,10 @@
             </div>
 
             <!-- Aalsa Farms -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="image" data-media-src="media/aalsa farms.png">
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="image"
+                data-media-src="media/aalsa farms.png">
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <img src="media/aalsa farms.png" class="absolute inset-0 w-full h-full object-cover"
                             alt="Aalsa Farms Interface">
@@ -443,9 +446,10 @@
             </div>
 
             <!-- Munlify -->
-            <div class="group flex flex-col gap-6">
-                <div class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative js-modal-trigger cursor-pointer"
-                    data-media-type="video" data-media-src="media/munlify vid.mp4">
+            <div class="group flex flex-col gap-6 js-modal-trigger cursor-pointer" data-media-type="video"
+                data-media-src="media/munlify vid.mp4">
+                <div
+                    class="w-full aspect-video border border-white/10 rounded-[30px] overflow-hidden bg-[#0a0a0a] relative">
                     <div class="w-full h-full relative transition-transform duration-700 group-hover:scale-105">
                         <video class="absolute inset-0 w-full h-full object-cover bg-black/50" autoplay loop muted
                             playsinline>
@@ -821,13 +825,15 @@
         // Attach listeners to Project Cards using the generic class
         document.querySelectorAll('.js-modal-trigger').forEach(trigger => {
             trigger.addEventListener('click', (e) => {
+                // Ignore clicks on links or button elements within the project card
+                if (e.target.closest('a') || e.target.closest('button')) return;
+
                 const type = trigger.dataset.mediaType;
                 let srcOrGallery = trigger.dataset.mediaSrc;
                 const useOSD = trigger.dataset.useOsd === 'true';
 
-                // Find associated caption content (sibling of parent or next element in DOM structure)
-                // structure is now: .group > .js-modal-trigger (sibling) .js-caption-content
-                const captionContent = trigger.parentElement.querySelector('.js-caption-content');
+                // Find associated caption content (which is a child of the trigger now)
+                const captionContent = trigger.querySelector('.js-caption-content');
 
                 if (type === 'carousel') {
                     // Parse the JSON array for gallery
